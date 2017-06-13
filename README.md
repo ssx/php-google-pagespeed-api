@@ -1,3 +1,5 @@
+![Circle CI](https://circleci.com/gh/ssx/php-google-pagespeed-api.png?style=shield " ") ![StyleCI](https://styleci.io/repos/94243628/shield " ")
+
 # PHP Google PageSpeed API
 
 This is a tiny micro client for making calls to the Google Pagespeed API which
