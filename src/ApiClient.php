@@ -5,14 +5,16 @@ namespace SSX\API\Google\PageSpeed;
  * Class ApiClient
  * @package SSX\API\Google\PageSpeed
  */
-class ApiClient {
+class ApiClient
+{
 
     /**
      * This holds the pagespeed API endpoint we'll make a request to.
      *
      * @var string
      */
-    private $apiUrl = "https://www.googleapis.com/pagespeedonline/v1/runPagespeed?strategy=desktop&screenshot=true&url=";
+    private $apiUrl = "https://www.googleapis.com/pagespeedonline/v1/runPagespeed?".
+                            "strategy=desktop&screenshot=true&url=";
 
     /**
      * @var mixed
@@ -26,8 +28,8 @@ class ApiClient {
      * @param string $apiKey    An API key for your project
      * @throws \Exception
      */
-    public function __construct($siteUrl, $apiKey = "") {
-
+    public function __construct($siteUrl, $apiKey = "")
+    {
         $url = $this->apiUrl.$siteUrl;
         if (!empty($apiKey)) {
             $url .= "&key=".$apiKey;
@@ -46,7 +48,8 @@ class ApiClient {
      *
      * @return bool|string
      */
-    public function getScreenshot() {
+    public function getScreenshot()
+    {
         if (isset($this->response->screenshot->data)) {
             $image = $this->response->screenshot->data;
             $image = str_replace("_", "/", $image);
@@ -62,8 +65,8 @@ class ApiClient {
      *
      * @return mixed
      */
-    public function getRaw() {
+    public function getRaw()
+    {
         return $this->response;
     }
-
 }
