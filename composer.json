@@ -1,5 +1,5 @@
 {
-    "name": "ssx/php-google-pagespeed",
+    "name": "ssx/php-google-pagespeed-api",
     "description": "PHP Google PageSpeed API Micro Client.",
     "license": "Apache-2.0",
     "require": {
